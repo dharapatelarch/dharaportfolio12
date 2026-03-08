@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Architectural Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <div class="logo"></div>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>ARCHITECTURAL PORTFOLIO</h1>
+    <p>DHARA PATEL</p>
+  </div>
+</section>
+<section class="about-section">
+
+  <div class="cv-container">
+  <img src="CV.png" alt="CV" class="cv-image">
+</div>
+
+</section>
+
+<!-- FEATURED PROJECT SLIDER -->
+
+<section class="featured-project">
+
+  <div class="project-container">
+
+    <button class="nav-btn left" onclick="prevSlide()">&#10094;</button>
+
+    <a id="projectLink" href="project1.html">
+  <img id="sliderImage" src="PROJECT 1.png" class="featured-image">
+</a>
+    
+
+    <button class="nav-btn right" onclick="nextSlide()">&#10095;</button>
+
+  </div>
+
+  <div class="project-details">
+  <h3 id="projectTitle">Project 1</h3>
+  <p id="projectDesc">Urban Landscape Design</p>
+</div>
+
+</section>
+
+
+
+
+<section class="skills">
+  <h2>Software Skills</h2>
+
+  <div class="skill-icons">
+    <div>AutoCAD</div>
+    <div>SketchUp</div>
+    <div>Photoshop</div>
+  </div>
+
+</section>
+
+
+<script>
+
+const images = [
+  "PROJECT 4.jpg.jpeg",
+  "PROJECT 1.png",
+  "PROJECT 2.png",
+  "PROJECT 3.png"
+  
+];
+
+const titles = [
+  "Project 1",
+  "Project 2",
+  "Project 3",
+  "Project 4"
+];
+
+const descriptions = [
+  "Institutional Design",
+  "Urban Landscape Design",
+  "Compact Leisure Space",
+  "A Weaving Cultural Hub"
+  
+];
+
+const links = [
+   "project4.html",
+  "project1.html",
+  "project2.html",
+  "project3.html"
+ 
+];
+
+let currentIndex = 0;
+
+function updateSlide() {
+  document.getElementById("sliderImage").src = images[currentIndex];
+  document.getElementById("projectTitle").innerText = titles[currentIndex];
+  document.getElementById("projectDesc").innerText = descriptions[currentIndex];
+  document.getElementById("projectLink").href = links[currentIndex];
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % images.length;
+  updateSlide();
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  updateSlide();
+}
+
+/* THIS LINE FIXES YOUR PROBLEM */
+updateSlide();
+
+</script>
+
+</body>
+
+</html>
+
+
+
+
