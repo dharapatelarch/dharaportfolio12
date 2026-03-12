@@ -820,3 +820,18 @@ z-index:2;
   text-decoration:none;
   font-weight:500;
 }
+.project-gallery{
+  display:flex;
+  flex-wrap:wrap;
+  gap:40px;
+  justify-content:center;
+  padding:40px;
+}
+
+.project-gallery img{
+  width:420px;
+  max-width:100%;
+  border-radius:12px;
+  cursor:pointer;
+  transition:0.3s;
+}
