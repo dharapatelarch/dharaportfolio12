@@ -1,51 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Architectural Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Architectural Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 </head>
+
 
 <body>
 
+
+<!-- HEADER -->
+
 <header>
-  <div class="logo"></div>
-  <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="#about">About</a>
-  </nav>
+
+<div class="logo"></div>
+
+<nav>
+<a href="index.html" class="active">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="#about">About</a>
+</nav>
+
 </header>
 
+
+
+<!-- HERO SECTION -->
+
 <section class="hero">
-  <div class="hero-content">
-    <h1>ARCHITECTURAL PORTFOLIO</h1>
-    <p>DHARA PATEL</p>
-  </div>
-</section>
+
+<div class="hero-content">
+
+<h1>ARCHITECTURAL PORTFOLIO</h1>
+<p>DHARA PATEL</p>
+
+</div>
 
 </section>
+
+
+
 <!-- FEATURED PROJECT SLIDER -->
 
 <section class="featured-project">
 
-  <div class="project-container">
+<div class="project-container">
 
-    <button class="nav-btn left" onclick="prevSlide()">&#10094;</button>
+<button class="nav-btn left" onclick="prevSlide()">&#10094;</button>
 
-    <a id="projectLink" href="project1.html">
-  <img id="sliderImage" src="PROJECT 1.png" class="featured-image">
+<a id="projectLink" href="project1.html">
+
+<img id="sliderImage" src="PROJECT 1.png" class="featured-image">
+
+<div class="project-details">
+
+<h3 id="projectTitle">Project 1</h3>
+<p id="projectDesc">Urban Landscape Design</p>
+
+</div>
+
 </a>
-    
 
-    <button class="nav-btn right" onclick="nextSlide()">&#10095;</button>
+<button class="nav-btn right" onclick="nextSlide()">&#10095;</button>
 
-  </div>
+</div>
 
-  <div class="project-details">
-  <h3 id="projectTitle">Project 1</h3>
-  <p id="projectDesc">Urban Landscape Design</p>
+</section>
+
+
+
+<!-- ABOUT SECTION -->
+
+<section class="about-section" id="about">
+
+<div class="profile-container">
+
+<div class="profile-image">
+<img src="profile.png" alt="Profile Photo">
+</div>
+
+
+<div class="profile-info">
+
+<p class="profile-tag">About</p>
+
+<h2>Dhara Patel</h2>
+
+<h4>Architect Student</h4>
+
+<p class="profile-desc">
+
+I am an architecture student driven by curiosity about how spaces shape human experiences.
+I enjoy designing environments that are intuitive, comfortable, and purposeful—where functionality meets emotion.
+
+Through my academic journey, I have worked on institutional, residential, and landscape projects, developing a versatile understanding of design across different scales and contexts.
+
+I aspire to build a professional career by creating human-centered spaces that thoughtfully enhance everyday life.
+
+</p>
+
+
+<div class="contact-info">
+<p>✉ dharasp1209@gmail.com</p>
+<p>📞 +91 9377555000</p>
+</div>
+
+
+<a href="CV(5).png" target="_blank" class="cv-btn">View CV</a>
+
+</div>
+
 </div>
 
 </section>
@@ -53,106 +123,89 @@
 
 
 
-<section class="about-section">
-
-  <div class="profile-container">
-
-    <div class="profile-image">
-      <img src="profile.png" alt="Profile Photo">
-    </div>
-
-    <div class="profile-info">
-
-      <p class="profile-tag">About</p>
-
-      <h2>Dhara Patel</h2>
-
-      <h4>Architect Student</h4>
-
-      <p class="profile-desc">
-        I am an architecture student driven by curiosity about how spaces shape human experiences. 
-        I enjoy designing environments that are intuitive, comfortable, and purposeful—where functionality meets emotion. 
-        Through my academic journey, I have worked on institutional, residential, and landscape projects, developing a versatile understanding of design across different scales and contexts. 
-        I aspire to build a professional career by creating human-centered spaces that thoughtfully enhance everyday life.
-      </p>
-
-      
-      <div class="contact-info">
-        <p>✉ dharasp1209@gmail.com</p>
-        <p>📞 +91 9377555000</p>
-      </div>
-
-      <a href="CV(5).png" target="_blank" class="cv-btn">View CV</a>
-
-    </div>
-
-  </div>
-
-
-
 <script>
 
 const images = [
-  "PROJECT 4.jpg.jpeg",
-  "PROJECT 1.png",
-  "PROJECT 2.png",
-  "PROJECT 3.png"
-  
+"PROJECT 4.jpg.jpeg",
+"PROJECT 1.png",
+"PROJECT 2.png",
+"PROJECT 3.png"
 ];
 
 const titles = [
-  "Project 1",
-  "Project 2",
-  "Project 3",
-  "Project 4"
+"Project 1",
+"Project 2",
+"Project 3",
+"Project 4"
 ];
 
 const descriptions = [
-  "Institutional Design",
-  "Urban Landscape Design",
-  "Compact Leisure Space",
-  "A Weaving Cultural Hub"
-  
+"Institutional Design",
+"Urban Landscape Design",
+"Compact Leisure Space",
+"A Weaving Cultural Hub"
 ];
 
 const links = [
-   "project4.html",
-  "project1.html",
-  "project2.html",
-  "project3.html"
- 
+"project4.html",
+"project1.html",
+"project2.html",
+"project3.html"
 ];
 
 let currentIndex = 0;
 
-function updateSlide() {
-  document.getElementById("sliderImage").src = images[currentIndex];
-  document.getElementById("projectTitle").innerText = titles[currentIndex];
-  document.getElementById("projectDesc").innerText = descriptions[currentIndex];
-  document.getElementById("projectLink").href = links[currentIndex];
+
+
+function updateSlide(){
+
+const img = document.getElementById("sliderImage");
+
+img.style.opacity = 0;
+
+setTimeout(()=>{
+
+img.src = images[currentIndex];
+
+document.getElementById("projectTitle").innerText = titles[currentIndex];
+
+document.getElementById("projectDesc").innerText = descriptions[currentIndex];
+
+document.getElementById("projectLink").href = links[currentIndex];
+
+img.style.opacity = 1;
+
+},300);
+
 }
 
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % images.length;
-  updateSlide();
+
+
+function nextSlide(){
+
+currentIndex = (currentIndex + 1) % images.length;
+
+updateSlide();
+
 }
 
-function prevSlide() {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  updateSlide();
+
+
+function prevSlide(){
+
+currentIndex = (currentIndex - 1 + images.length) % images.length;
+
+updateSlide();
+
 }
 
-/* THIS LINE FIXES YOUR PROBLEM */
+
+
 updateSlide();
 
 </script>
 
+
 </body>
 
 </html>
-
-
-
-
-
-
