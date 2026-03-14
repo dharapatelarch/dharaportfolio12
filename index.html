@@ -145,86 +145,23 @@ I aspire to build a professional career by creating human-centered spaces that t
 
 <script>
 
-const images = [
-"PROJECT 4.jpg.jpeg",
-"PROJECT 1.png",
-"PROJECT 2.png",
-"PROJECT 3.png"
-];
+const projects = document.querySelectorAll(".project-item");
 
-const titles = [
-"Project 1",
-"Project 2",
-"Project 3",
-"Project 4"
-];
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
 
-const descriptions = [
-"Institutional Design",
-"Urban Landscape Design",
-"Compact Leisure Space",
-"A Weaving Cultural Hub"
-];
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
 
-const links = [
-"project4.html",
-"project1.html",
-"project2.html",
-"project3.html"
-];
+  });
+}, {threshold:0.25});
 
-let currentIndex = 0;
-
-
-
-function updateSlide(){
-
-const img = document.getElementById("sliderImage");
-
-img.style.opacity = 0;
-
-setTimeout(()=>{
-
-img.src = images[currentIndex];
-
-document.getElementById("projectTitle").innerText = titles[currentIndex];
-
-document.getElementById("projectDesc").innerText = descriptions[currentIndex];
-
-document.getElementById("projectLink").href = links[currentIndex];
-
-img.style.opacity = 1;
-
-},300);
-
-}
-
-
-
-function nextSlide(){
-
-currentIndex = (currentIndex + 1) % images.length;
-
-updateSlide();
-
-}
-
-
-
-function prevSlide(){
-
-currentIndex = (currentIndex - 1 + images.length) % images.length;
-
-updateSlide();
-
-}
-
-
-
-updateSlide();
+projects.forEach(project => {
+  observer.observe(project);
+});
 
 </script>
-
 
 </body>
 
