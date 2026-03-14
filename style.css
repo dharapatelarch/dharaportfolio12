@@ -940,3 +940,25 @@ transition:transform .3s ease;
 .project-card:hover span{
 transform:translateX(6px);
 }
+/* PROJECT SCROLL ANIMATION */
+
+.project-item{
+opacity:0;
+transform:translateY(80px);
+transition:all .9s ease;
+}
+
+.project-item.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* image hover animation */
+
+.project-item img{
+transition:transform 1s ease;
+}
+
+.project-item:hover img{
+transform:scale(1.05);
+}
