@@ -962,3 +962,14 @@ transition:transform 1s ease;
 .project-item:hover img{
 transform:scale(1.05);
 }
+
+.project-item{
+opacity:0;
+transform:translateY(80px);
+transition:all .9s ease;
+}
+
+.project-item.show{
+opacity:1;
+transform:translateY(0);
+}
