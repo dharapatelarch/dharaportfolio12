@@ -617,6 +617,57 @@ margin-bottom:40px;
 text-align:center;
 }
 
+
 .project-block{
 margin-bottom:60px;
+}
+
+
+
+.small-image{
+width:50%;
+max-width:350px;
+margin:auto;
+display:block;
+}
+
+.small-image1{
+width:50%;
+max-width:850px;
+margin:auto;
+display:block;
+}
+.small-image2{
+width:50%;
+max-width:900px;
+margin:auto;
+display:block;
+}
+.small-image3{
+width:50%;
+max-width:550px;
+margin:auto;
+display:block;
+}
+/* row of images */
+
+.image-row{
+display:flex;
+gap:35px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.image-row img{
+width:23%;      /* smaller width */
+height:auto;    /* keeps full image */
+border-radius:12px;
+cursor:pointer;
+box-shadow:0 25px 50px rgba(0,0,0,0.7);
+transition:0.4s;
+}
+
+.image-row img:hover{
+transform:scale(1.02);
 }
