@@ -1,113 +1,260 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Project 4</title>
+<title>The Loom Yard</title>
+
 <link rel="stylesheet" href="style.css">
 
 <style>
 
-/* gallery layout */
-.project-gallery{
-  display:flex;
-  gap:40px;
-  justify-content:center;
-  padding:40px;
+/* PAGE */
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#0f1115;
+color:white;
 }
 
-.project-gallery img{
-  width:500px;
-  border-radius:12px;
-  cursor:pointer;
-  transition:0.3s;
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 8%;
+border-bottom:1px solid #222;
 }
 
-.project-gallery img:hover{
-  transform:scale(1.03);
+.logo{
+font-size:20px;
+letter-spacing:2px;
 }
 
-/* fullscreen viewer */
-
-.lightbox{
-  display:none;
-  position:fixed;
-  z-index:1000;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.9);
-  justify-content:center;
-  align-items:center;
+nav a{
+color:white;
+text-decoration:none;
+font-size:16px;
 }
 
-.lightbox img{
-  max-width:90%;
-  max-height:90%;
+
+/* PROJECT PAGE */
+
+.project-page{
+padding:80px 8%;
+text-align:center;
 }
 
-.close{
-  position:absolute;
-  top:30px;
-  right:50px;
-  font-size:40px;
-  color:white;
-  cursor:pointer;
+.project-page h1{
+font-size:42px;
+margin-bottom:60px;
+}
+
+
+/* CONTENT LAYOUT */
+
+.project-content{
+max-width:1100px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:70px;
+text-align:left;
+}
+
+
+/* TEXT */
+
+.project-block p{
+font-size:18px;
+line-height:1.8;
+color:#cfcfcf;
+letter-spacing:0.3px;
+}
+
+
+/* IMAGE */
+
+.project-block img{
+width:100%;
+border-radius:12px;
+cursor:pointer;
+box-shadow:0 25px 50px rgba(0,0,0,0.7);
+transition:0.4s;
+}
+
+.project-block img:hover{
+transform:scale(1.02);
+}
+
+
+/* FULLSCREEN IMAGE VIEWER */
+
+#imageViewer{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.95);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+#viewerImg{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+}
+
+#closeBtn{
+position:absolute;
+top:30px;
+right:40px;
+font-size:40px;
+color:white;
+cursor:pointer;
 }
 
 </style>
 
 </head>
 
+
 <body>
 
+
 <header>
-  <div class="logo">ARCHITECTURAL PORTFOLIO</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="index.html#about">About</a>
-  </nav>
+
+<div class="logo">ARCHITECTURAL PORTFOLIO</div>
+
+<nav>
+<a href="index.html">Home</a>
+</nav>
+
 </header>
+
+
 
 <section class="project-page">
 
-<h1>Project 4</h1>
+<h1>The Loom Yard</h1>
 
-<div class="project-gallery">
 
-<img src="PROJECT 04 - 01 (1).png" onclick="openImage(this)">
-<img src="PROJECT 04 - 02.png" onclick="openImage(this)">
-<img src="PROJECT 04 - 03.png" onclick="openImage(this)">
+<div class="project-content">
+
+
+<!-- TEXT -->
+
+
+
+
+<!-- IMAGE -->
+
+<div class="project-block">
+
+<img src="PROJECT 04 - 01 (2) .png" onclick="openImage(this.src)">
+
+</div>
+<div class="project-block">
+
+<p>
+Concept : To create a self-sustaining artisan micro-habitat that celebrates the weaving heritage of Bhuj, while also supporting local artisans with workspaces, living quarters, and a cultural platform to showcase their crafts. This design is both functional and cultural, reflecting traditional values and contemporary community needs.
+</p>
+
+</div>
+<div class="project-block">
+
+<img src="PROJECT 04 - 02 (1).png" onclick="openImage(this.src)">
+
+</div>
+
+
+<!-- TEXT -->
+
+<div class="project-block">
+
+<p>
+A self-sustaining artisan micro-habitat that celebrates the weaving heritage of Bhuj, integrating living, working, and exhibition spaces to support local artisans while preserving tradition and fostering community interaction.
+</p>
+<p>
+Total Site Area : 8015.45 M2 - Proposed Site Area : 900 M2
+</p>
+</div>
+
+
+<!-- IMAGE -->
+
+<div class="project-block">
+
+<img src="PROJECT 04 - 03 (1).png" onclick="openImage(this.src)">
+
+</div>
+
+
+<div class="project-block">
+
+<p>
+Situated on the edge of Bhimraonagar in Bhuj, this site lies in a region steeped in textile craftsmanship, home to generations of skilled artisans. The proximity to artisan settlements means this space is not just a workshop—it's a community landmark, embedded in the social and economic fabric of the neighborhood.
+</p>
+
+</div>
+<div class="project-block">
+
+<img src="PROJECT 04 - 04.png" onclick="openImage(this.src)">
+
+</div>
+
+
+</div>
+
+
+<div class="project-block">
+
+<img src="PROJECT 04 - 05.png" onclick="openImage(this.src)">
+
+</div>
+<div class="project-block">
+
+<img src="PROJECT 04 - 06.png" onclick="openImage(this.src)">
 
 </div>
 
 </section>
 
 
-<!-- FULLSCREEN VIEWER -->
 
-<div id="lightbox" class="lightbox">
-<span class="close" onclick="closeImage()">&times;</span>
-<img id="lightboxImg">
+<!-- FULLSCREEN IMAGE VIEWER -->
+
+<div id="imageViewer">
+
+<span id="closeBtn" onclick="closeImage()">✕</span>
+
+<img id="viewerImg">
+
 </div>
+
 
 
 <script>
 
-function openImage(img){
-  document.getElementById("lightbox").style.display="flex";
-  document.getElementById("lightboxImg").src=img.src;
+function openImage(src){
+document.getElementById("imageViewer").style.display="flex";
+document.getElementById("viewerImg").src=src;
 }
 
 function closeImage(){
-  document.getElementById("lightbox").style.display="none";
+document.getElementById("imageViewer").style.display="none";
 }
 
 </script>
 
+
 </body>
-
 </html>
-
