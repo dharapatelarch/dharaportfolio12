@@ -753,3 +753,47 @@ transform:scale(1.02);
   margin-bottom: 20px;
   letter-spacing: 1px;
 }
+.small-image1,
+.small-image2 {
+  width:45%;
+  display:block;
+  margin:auto;
+}
+/* VISUAL EXPLORATION SECTION */
+
+.visual-section{
+padding:80px 8%;
+text-align:center;
+border-top:1px solid #1a1a1a;
+}
+
+.visual-title{
+font-size:28px;
+margin-bottom:50px;
+letter-spacing:1px;
+}
+
+/* GALLERY GRID */
+
+.visual-gallery{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+/* IMAGES */
+
+.visual-gallery img{
+width:180px;
+height:180px;
+object-fit:cover;
+border-radius:14px;
+transition:0.3s;
+cursor:pointer;
+}
+
+.visual-gallery img:hover{
+transform:scale(1.05);
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
